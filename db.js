@@ -11,7 +11,9 @@ module.exports = {
 
 function getProperties (conn = connection) {
   return conn('properties')
+    .join('feedback', 'properties.id', 'feedback.property_id')
     .select()
+    .orderBy('feedback.datetime', 'desc')
 }
 
 function getPropertyFeedback (id, conn = connection) {
