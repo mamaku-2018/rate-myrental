@@ -19,8 +19,45 @@ test('home page ', (done) => {
     .end((err, res) => {
       // console.log('res-text: ', res.text)
       const $ = cheerio.load(res.text)
-      const paragraph = $('p').text()
-      expect(paragraph).toMatch('home')
+      const paragraph = $('button').text()
+      expect(paragraph).toMatch('ate')
+      done(err)
+    })
+})
+
+test('feedback page ', (done) => {
+  return request(server)
+    .get('/')
+    .expect(200)
+    .end((err, res) => {
+      // console.log('res-text: ', res.text)
+      const $ = cheerio.load(res.text)
+      const paragraph = $('button').text()
+      expect(paragraph).toMatch('ate')
+      done(err)
+    })
+})
+test('properties page ', (done) => {
+  return request(server)
+    .get('/')
+    .expect(200)
+    .end((err, res) => {
+      // console.log('res-text: ', res.text)
+      const $ = cheerio.load(res.text)
+      const paragraph = $('button').text()
+      expect(paragraph).toMatch('ate')
+      done(err)
+    })
+})
+test('property page ', (done) => {
+  return request(server)
+    .get('/')
+    .expect(200)
+    .end((err, res) => {
+      // console.log('res-text: ', res.text)
+      const $ = cheerio.load(res.text)
+      const paragraph = $('button').text()
+      expect(paragraph).toMatch('ate')
       done(err)
     })
 })
