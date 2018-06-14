@@ -5,8 +5,8 @@ exports.up = function (knex, Promise) {
     table.string('suburb')
     table.string('city')
     table.string('postcode')
-    table.string('bedroom')
-    table.string('bathroom')
+    table.integer('bedroom')
+    table.integer('bathroom')
     table.string('image')
   })
 }
