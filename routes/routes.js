@@ -26,7 +26,7 @@ router.get('/property/:id', (req, res) => {
       res.render('property', {propertyFeedback: propertyFeedback})
     })
     .catch(err => {
-      res.status(500).send('DATABASE ERROR: ' + err.messagegi)
+      res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 })
 
