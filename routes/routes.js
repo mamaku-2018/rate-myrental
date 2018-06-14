@@ -22,6 +22,7 @@ router.get('/property/:id', (req, res) => {
   const id = req.params.id
   db.getPropertyFeedback(id)
     .then(propertyFeedback => {
+      console.log(propertyFeedback)
       res.render('property', {propertyFeedback: propertyFeedback})
     })
     .catch(err => {
@@ -34,10 +35,10 @@ router.get('/feedback/:id', (req, res) => {
   db.getFeedback(id)
     .then(feedback => {
       res.render('feedback', {feedback: feedback})
-  })
+    })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
-  })
+    })
 })
 
 router.get('/feedbackForm', (req, res) => {
@@ -55,9 +56,8 @@ router.post('/feedbackForm', (req, res) => {
     //     })
     // })
     .then(() => {
-      res.redirect('/property'+ id)
+      res.redirect('/property' + id)
     })
 })
-
 
 module.exports = router
