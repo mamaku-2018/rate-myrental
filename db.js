@@ -28,7 +28,7 @@ function getFeedback (id, conn = connection) {
 }
 
 function addFeedback (feedback, conn = connection) {
-    return conn('feedback').insert([
-      {}
-    ])
+  return conn('feedback').insert([
+    {}
+  ])
 }
