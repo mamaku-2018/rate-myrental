@@ -1,11 +1,13 @@
 {{>nav>>}}
+<h1>PROPERTIES</h1>
  <img id="mainlogo" src="./images/logo.png">
 
 {{#each properties}}
 <a href="/property/{{id}}">{{street}}, {{city}}, {{postcode}}</a>
 {{/each}}
 
-<h2></h2>
+<h2>Latest Property Reviews</h2>
+
   <table class="propertylist" style="width:80%">
     <tr>
       <th>Image</th>
@@ -15,16 +17,15 @@
     </tr>
     <tr>
       {{#each properties}}
-      <td href=""/property/{{id}}">{{image}}</td>
+      <td href="/property/{{id}}">{{image}}</td>
       {{/each}}
       {{#each properties}}
       <td>{{street}},{{suburb}},{{city}}</td>
       {{/each}}
-      {{#each feedback}} 
-      <td>{{datetime}}</td>
+      {{#each propertyFeedback}} 
+      <td>{{id.datetime}}</td>
       {{/each}}
     {{!-- need function to calculate percentage rating  --}}
-    
     </tr>
   </table>
 
