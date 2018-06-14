@@ -11,7 +11,16 @@ router.get('/', (req, res) => {
 router.get('/properties', (req, res) => {
   db.getProperties()
     .then(properties => {
-      res.render('properties', {properties: properties})
+      let propertyList = {
+        p: []
+      }
+      properties.forEach(obj => {
+        if (!propertyList.p.some(prop => obj.property_id === prop.property_id)) {
+          propertyList.p.push(obj)
+        }
+      })
+      console.log(propertyList)
+      res.render('properties', {propertyList: propertyListgit })
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
