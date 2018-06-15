@@ -19,7 +19,7 @@ router.get('/properties', (req, res) => {
           propertyList.p.push(obj)
         }
       })
-      // console.log(propertyList)
+       // console.log(propertyList)
       res.render('properties', {propertyList: propertyList})
     })
     .catch(err => {
