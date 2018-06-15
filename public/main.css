@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-position: center; 
+  background-size: 70%; 
   background-color: #cccccc;
  
 }
@@ -72,6 +73,10 @@ nav a {
   text-decoration: none;
 }
 
+.right-nav a:hover { 
+  color: black;
+  border-bottom: 2px solid black;
+}
 
 nav ul, nav:active ul { 
   display: flex;
