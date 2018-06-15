@@ -33,11 +33,11 @@ test('properties page has 3 properties', () => {
     })
 })
 
-// test('test property has 1 feedback', () => {
-//   const id = 2
-//   return db.getPropertyFeedback(id, testDb)
-//     .then(property => {
-//       expect(property.length).toBe(1)
-//       expect(property[0].type).toBe('Test Sedan')
-//     })
-// })
+test('test property has 1 feedback', () => {
+  const id = 2
+  return db.getPropertyFeedback(id, testDb)
+    .then(property => {
+      expect(property.length).toBe(1)
+      expect(property[0].type).toBe('')
+    })
+})
