@@ -100,6 +100,32 @@ nav li {
 .form {
   padding: 20%;
   padding-top: 5%; 
-  background: rgba(0,0,0,0.3)
+  background: rgba(0,0,0,0.3); 
+  color: white; 
+  font-size: 20px; 
 }
 
+.q {
+  padding: 5px;
+  background: rgba(0,0,0,0.3); 
+}
+
+table {
+  padding: 20%;
+  padding-top: 10%; 
+  background: rgba(0,0,0,0.3); 
+  color: white; 
+  font-size: 20px; 
+}
+
+div.table img {
+  max-height: 100px; 
+}
+
+.about {
+  padding: 20%;
+  padding-top: 5%; 
+  background: rgba(0,0,0,0.3); 
+  color: white; 
+  font-size: 20px; 
+}
