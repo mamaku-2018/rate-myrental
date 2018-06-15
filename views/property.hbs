@@ -25,27 +25,24 @@
     {{/each}}
 </table> --}}
 
+<ul>
+  <li><img src={{image}} </li>
+  <li></li>
+</ul>
 
 <table class="propertyIdTable" style="width:80%" align="centre">
+  
   <tr>
     <th>Percentage Rating</th>
     <th>Date</th>
     <th>Link to Feedback</th>
   </tr>
-<tr>
-  {{#each propertyList.p}}
-  <td>*****{{percentage}}</td>
-  {{/each}}
-   {{#each propertyList.p}} 
+  <tr>
+  {{#each propertyList.f}}
+  <td>{{percentage}}</td>
   <td>{{datetime}}</td>
-   {{/each}}
-  {{#each propertyList.p}} 
   <td>{{feedback}}</td>
   {{/each}}
 </tr>
-{{!--  
-{{id}} was added on {{percentage}} {{datetime}} <br>
-{{/each}}
-</tr>
-</table>
-</div> --}}
+
+
