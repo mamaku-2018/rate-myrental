@@ -1,7 +1,31 @@
 body {
-  background-color: pink;
+  background-image: url(https://www.odt.co.nz/sites/default/files/styles/odt_story_slideshow/public/story/2016/04/not_every_villa_can_escape_the_ravages_of_time_pho_7863354554.JPG?itok=FW2UsfE-);
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: center; 
+  background-color: #cccccc;
+ 
 }
 
+.landing-main {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+
 h1 {
-color:pink; 
+color:white; 
+text-align: center
+}
+
+h2 {
+
+}
+
+#propertyList {
+ 
 }
