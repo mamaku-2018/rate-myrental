@@ -11,7 +11,16 @@ router.get('/', (req, res) => {
 router.get('/properties', (req, res) => {
   db.getProperties()
     .then(properties => {
-      res.render('properties', {properties: properties})
+      let propertyList = {
+        p: []
+      }
+      properties.forEach(obj => {
+        if (!propertyList.p.some(prop => obj.property_id === prop.property_id)) {
+          propertyList.p.push(obj)
+        }
+      })
+      // console.log(propertyList)
+      res.render('properties', {propertyList: propertyList})
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
@@ -22,8 +31,22 @@ router.get('/property/:id', (req, res) => {
   const id = req.params.id
   db.getPropertyFeedback(id)
     .then(propertyFeedback => {
-      console.log(propertyFeedback)
-      res.render('property', {propertyFeedback: propertyFeedback})
+      let feedbackList = {
+        f: []
+      }
+      propertyFeedback.forEach(feedback => {
+        feedbackList.f.push({
+          id: feedback.id,
+          street: feedback.street,
+          city: feedback.city,
+          postcode: feedback.postcode,
+          image: feedback.image,
+          datetime: feedback.datetime,
+          percentage: Math.floor(((feedback.answer1 + feedback.answer2 + feedback.answer3) / 15) * 100)
+        })
+      })
+      console.log(feedbackList)
+      res.render('property', {feedbackList: feedbackList})
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
