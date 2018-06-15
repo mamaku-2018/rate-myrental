@@ -1,4 +1,9 @@
-<form action="/feedbackForm" method="POST">
+<form action="/form" method="POST">
+  <select name="properties" placeholder="select property">
+    {{#each properties}}
+    <option value="{{id}}">{{street}}</option>
+{{/each}}
+</select>
 
   <label for="question1">
 My Kitchen 
