@@ -16,14 +16,27 @@ body {
   font-size: 18px;
 }
 
+.loginbox {
+ color: white;
+}
+
+tr, td {
+  color: white; 
+}
 
 h1 {
 color:white; 
 text-align: center
 }
 
+h2 {
+  color: #F85224;
+}
 
-
+.homebutton {
+  width: 
+  height: 
+}
 #propertyList {
  padding: 40px;
  border: 30px;
