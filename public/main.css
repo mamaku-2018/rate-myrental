@@ -113,13 +113,17 @@ nav li {
 table {
   padding: 20%;
   padding-top: 10%; 
+  margin: 0 auto;
+  margin-top: 10%;
   background: rgba(0,0,0,0.3); 
   color: white; 
   font-size: 20px; 
+  text-align: center;
 }
 
-div.table img {
-  max-height: 100px; 
+table img {
+  max-height: 150px;
+  width: 50%; 
 }
 
 .about {

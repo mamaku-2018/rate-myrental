@@ -8,13 +8,22 @@
       <th>Date Submitted</th>
       <th>Percentage Rating</th>
     </tr>
-    <tr>
+    
       {{#each propertyList.p}}
+      <tr>
       <td>
-        <a href="/property/{{id}}"><img src="{{image}}"></a> <br>
-        <b>Address:</b> {{street}},{{suburb}},{{city}} <br>
-        <b>Update Date:</b> {{datetime}},{{suburb}},{{city}}<br>
+        <a href="/property/{{id}}"><img src="{{image}}"></a>
       </td>
+      <td>
+       {{street}},{{suburb}},{{city}} 
+        </td>
+        <td>
+        {{datetime}}
+      </td>
+      <td>
+        {{percentage}}
+      </td>
+      </tr>
       {{/each}}
     {{!-- need function to calculate percentage rating  --}}
   </table>
