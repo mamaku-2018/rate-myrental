@@ -102,7 +102,7 @@ router.post('/form', (req, res) => {
     //     })
     // })
     .then(() => {
-      res.redirect('/property' + id)
+      res.redirect('/property/' + id)
     })
 })
 
