@@ -33,16 +33,20 @@
     <th>Link to Feedback</th>
   </tr>
 <tr>
-  {{#each propertyList.p}}
+  {{#each feedbackList.f}}
   <td>*****{{percentage}}</td>
+   <td>{{datetime}}</td>
+     <td>{{feedback}}</td>
   {{/each}}
-   {{#each propertyList.p}} 
+   {{!-- {{#each propertyList.f}} 
   <td>{{datetime}}</td>
    {{/each}}
-  {{#each propertyList.p}} 
+  {{#each propertyList.f}} 
   <td>{{feedback}}</td>
-  {{/each}}
+  {{/each}} --}}
 </tr>
+
+
 {{!--  
 {{id}} was added on {{percentage}} {{datetime}} <br>
 {{/each}}
