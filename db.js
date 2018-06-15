@@ -31,7 +31,20 @@ function getFeedback (id, conn = connection) {
 }
 
 function addFeedback (feedback, conn = connection) {
+  const date = new Date()
+  const year = date.getFullYear()
+  const month = date.getMonth()
+  const day = date.getDay()
+  const newDate = year + '-' + month + '-' + day
   return conn('feedback').insert([
-    {}
+    {
+      property_id: feedback.properties,
+      answer1: feedback.question1,
+      answer2: feedback.question2,
+      answer3: feedback.question3,
+      answer4: feedback.question4,
+      answer5: feedback.question5,
+      datetime: newDate
+    }
   ])
 }

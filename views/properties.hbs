@@ -1,20 +1,18 @@
 <h1>PROPERTIES</h1>
 {{>nav}}
-    <tr>
+    {{!-- <tr>
       <th>Image</th>
       <th>Address</th> 
       <th>Date Submitted</th>
       <th>Percentage Rating</th>
-    </tr>
+    </tr> --}}
     <tr>
       {{#each propertyList.p}}
-      <td href="/property/{{id}}"><img src="{{image}}"></td>
-      {{/each}}
-      {{#each propertyList.p}}
-      <td>{{street}},{{suburb}},{{city}}</td>
-      {{/each}}
-      {{#each propertyList.p}} 
-      <td>{{datetime}}</td>
+      <td>
+        <a href="/property/{{id}}"><img src="{{image}}"></a> <br>
+        <b>Address:</b> {{street}},{{suburb}},{{city}} <br>
+        <b>Update Date:</b> {{datetime}},{{suburb}},{{city}}<br>
+      </td>
       {{/each}}
     {{!-- need function to calculate percentage rating  --}}
     </tr>
