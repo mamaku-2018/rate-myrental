@@ -45,7 +45,7 @@ router.get('/property/:id', (req, res) => {
           percentage: Math.floor(((feedback.answer1 + feedback.answer2 + feedback.answer3) / 15) * 100) + '%'
         })
       })
-      //console.log(feedbackList)
+      // console.log(feedbackList)
       res.render('property', {feedbackList: feedbackList})
     })
     .catch(err => {
@@ -72,7 +72,7 @@ router.get('/feedback/:id', (req, res) => {
           percentage: Math.floor(((fb.a1 + fb.a2 + fb.a3) / 15) * 100) + '%'
         })
       })
-      console.log(feedback)
+      // console.log(feedback)
       res.render('feedback', {feedbackData: feedbackData})
     })
     .catch(err => {
@@ -86,7 +86,8 @@ router.get('/feedbackForm', (req, res) => {
 
 router.post('/feedbackForm', (req, res) => {
   const feedback = req.body
-
+  console.log(feedback)
+  const id = 1
   db.addFeedback(feedback)
     // .then((userid) => {
     //   return db.addProfile(userid, url, picture)
