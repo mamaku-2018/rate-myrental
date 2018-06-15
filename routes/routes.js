@@ -16,10 +16,18 @@ router.get('/properties', (req, res) => {
       }
       properties.forEach(obj => {
         if (!propertyList.p.some(prop => obj.property_id === prop.property_id)) {
-          propertyList.p.push(obj)
+          propertyList.p.push({
+            id: obj.id,
+            street: obj.street,
+            city: obj.city,
+            postcode: obj.postcode,
+            image: obj.image,
+            datetime: obj.datetime,
+            percentage: Math.floor(((obj.answer1 + obj.answer2 + obj.answer3 + obj.answer4 + obj.answer5) / 25) * 100) + '%'
+          })
         }
       })
-       // console.log(propertyList)
+      // console.log(propertyList)
       res.render('properties', {propertyList: propertyList})
     })
     .catch(err => {
