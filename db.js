@@ -30,6 +30,8 @@ function getFeedback (id, conn = connection) {
     .where('feedback.id', id)
 }
 
+
+
 function addFeedback (feedback, conn = connection) {
   return conn('feedback').insert([
     {}
