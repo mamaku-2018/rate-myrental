@@ -34,8 +34,9 @@ h2 {
 }
 
 .homebutton {
-  width: 
-  height: 
+  width: 100px;
+  height: 50px; 
+  background-color: #cccccc
 }
 #propertyList {
  padding: 40px;
