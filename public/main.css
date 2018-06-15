@@ -8,6 +8,7 @@ body {
  
 }
 
+
 .landing-main {
   position: absolute;
   left: 0;
@@ -39,23 +40,6 @@ h2 {
   height: 50px; 
   background-color: #cccccc
 }
-<<<<<<< HEAD
-#propertyList {
-<<<<<<< HEAD
-=======
-
- 
-}
-
-/* property page /*
-
-
->>>>>>> 8e620a7656ff832094936dfff3d3376558b3812d
- padding: 40px;
- border: 30px;
-} 
-=======
->>>>>>> c41e485b295df34ef8ddf1a7958b2f4212b29a00
 
 nav {
   width: 100%;
@@ -79,7 +63,7 @@ nav {
 }
 
 .right-nav {
-  width: 50%;
+  width: 40%;
   float: right;
   padding: 0;
   margin-top: 5rem;
@@ -112,7 +96,10 @@ nav li {
   padding: 2rem 0;
   margin: 0;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 8e620a7656ff832094936dfff3d3376558b3812d
+.form {
+  padding: 20%;
+  padding-top: 5%; 
+  background: rgba(0,0,0,0.3)
+}
+
