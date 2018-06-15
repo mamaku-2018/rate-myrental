@@ -8,6 +8,7 @@ body {
  
 }
 
+
 .landing-main {
   position: absolute;
   left: 0;
@@ -62,7 +63,7 @@ nav {
 }
 
 .right-nav {
-  width: 50%;
+  width: 40%;
   float: right;
   padding: 0;
   margin-top: 5rem;
@@ -96,3 +97,8 @@ nav li {
   margin: 0;
 }
 
+.form {
+  padding: 20%;
+  padding-top: 5%; 
+  background: rgba(0,0,0,0.3)
+}
