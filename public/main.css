@@ -16,15 +16,38 @@ body {
   font-size: 18px;
 }
 
+.loginbox {
+ color: white;
+}
+
+tr, td {
+  color: white; 
+}
 
 h1 {
 color:white; 
 text-align: center
 }
 
+h2 {
+  color: #F85224;
+}
 
-
+.homebutton {
+  width: 
+  height: 
+}
 #propertyList {
+<<<<<<< HEAD
+=======
+
+ 
+}
+
+/* property page /*
+
+
+>>>>>>> 8e620a7656ff832094936dfff3d3376558b3812d
  padding: 40px;
  border: 30px;
 } 
@@ -80,3 +103,7 @@ nav li {
   padding: 2rem 0;
   margin: 0;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8e620a7656ff832094936dfff3d3376558b3812d

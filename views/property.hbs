@@ -4,6 +4,28 @@
 <div class="propertyIdMain">
 <h1>Property History</h1>
 
+  <h1>RATE MY RENTAL SUMMARY RESULTS</h1> 
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          {{image}}
+        </div>
+        <div class="col-md-8">
+          {{street}}, {{city}}, {{postcode}}
+        </div>
+      </div>
+    </div>
+
+{{!-- <table class="PropertyId" style="width:80%" align="centre">
+  {{#each propertyList.p}}
+    <td href="/property/{{id}}"><img src="{{image}}"></td>
+    {{/each}}
+    {{#each propertyList.p}}
+    <td>{{street}},{{suburb}},{{city}}</td>
+    {{/each}}
+</table> --}}
+
+
 <table class="propertyIdTable" style="width:80%" align="centre">
   <tr>
     <th>Percentage Rating</th>
@@ -11,12 +33,19 @@
     <th>Link to Feedback</th>
   </tr>
 <tr>
-    {{#each properties}}
-  <td></td>
-    {{#each feedbackList.f}}
+  {{#each propertyList.p}}
+  <td>*****{{percentage}}</td>
+  {{/each}}
+   {{#each propertyList.p}} 
+  <td>{{datetime}}</td>
+   {{/each}}
+  {{#each propertyList.p}} 
+  <td>{{feedback}}</td>
+  {{/each}}
+</tr>
+{{!--  
 {{id}} was added on {{percentage}} {{datetime}} <br>
 {{/each}}
 </tr>
-
 </table>
-</div>
+</div> --}}
