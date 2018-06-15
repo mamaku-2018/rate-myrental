@@ -1,31 +1,51 @@
-{{>nav}}
-<h1>PROPERTY</h1>
- <img id="mainlogo" src="./images/logo.png">
 
-  <h1>RATE ME RENTAL SUMMARY RESULTS</h1> 
+{{>nav}}
+
+<div class="propertyIdMain">
+<h1>Property History</h1>
+
+  <h1>RATE MY RENTAL SUMMARY RESULTS</h1> 
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-4">
           {{image}}
         </div>
-          <div class="col-md-8">
+        <div class="col-md-8">
           {{street}}, {{city}}, {{postcode}}
         </div>
       </div>
-
-    {{feedbackForm}}
-
     </div>
 
-{{>footer}}
-      {{!-- <p>property</p>
-      {{#each propertyFeedback}}
-      {{id}} was added on {{date_submitted}} --}}
+{{!-- <table class="PropertyId" style="width:80%" align="centre">
+  {{#each propertyList.p}}
+    <td href="/property/{{id}}"><img src="{{image}}"></td>
+    {{/each}}
+    {{#each propertyList.p}}
+    <td>{{street}},{{suburb}},{{city}}</td>
+    {{/each}}
+</table> --}}
 
-<h1>PROPERTY</h1>
-{{>nav}}
- <img id="mainlogo" src="./images/logo.png">
-<p>property</p>
-{{#each feedbackList.f}}
+
+<table class="propertyIdTable" style="width:80%" align="centre">
+  <tr>
+    <th>Percentage Rating</th>
+    <th>Date</th>
+    <th>Link to Feedback</th>
+  </tr>
+<tr>
+  {{#each propertyList.p}}
+  <td>*****{{percentage}}</td>
+  {{/each}}
+   {{#each propertyList.p}} 
+  <td>{{datetime}}</td>
+   {{/each}}
+  {{#each propertyList.p}} 
+  <td>{{feedback}}</td>
+  {{/each}}
+</tr>
+{{!--  
 {{id}} was added on {{percentage}} {{datetime}} <br>
 {{/each}}
+</tr>
+</table>
+</div> --}}
