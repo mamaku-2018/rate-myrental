@@ -1,15 +1,22 @@
 
-<h1>PROPERTY</h1>
 {{>nav}}
- <img id="mainlogo" src="/images/logo.png">
 
-<p>property</p>
+<div class="propertyIdMain">
+<h1>Property History</h1>
 
-
-{{#each feedbackList.f}}
+<table class="propertyIdTable" style="width:80%" align="centre">
+  <tr>
+    <th>Percentage Rating</th>
+    <th>Date</th>
+    <th>Link to Feedback</th>
+  </tr>
+<tr>
+    {{#each properties}}
+  <td></td>
+    {{#each feedbackList.f}}
 {{id}} was added on {{percentage}} {{datetime}} <br>
 {{/each}}
+</tr>
 
-
-
-
+</table>
+</div>
