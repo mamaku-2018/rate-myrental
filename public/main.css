@@ -39,6 +39,13 @@ h2 {
   background-color: #cccccc
 }
 #propertyList {
+
+ 
+}
+
+/* property page /*
+
+
  padding: 40px;
  border: 30px;
 } 
@@ -94,3 +101,4 @@ nav li {
   padding: 2rem 0;
   margin: 0;
 }
+
