@@ -25,18 +25,6 @@ test('home page ', (done) => {
     })
 })
 
-test('feedback page ', (done) => {
-  return request(server)
-    .get('/feedback')
-    .expect(200)
-    .end((err, res) => {
-      // console.log('res-text: ', res.text)
-      const $ = cheerio.load(res.text)
-      const paragraph = $('p').text()
-      expect(paragraph).toMatch('feedback')
-      done(err)
-    })
-})
 test('properties page ', (done) => {
   return request(server)
     .get('/properties')
@@ -44,20 +32,8 @@ test('properties page ', (done) => {
     .end((err, res) => {
       // console.log('res-text: ', res.text)
       const $ = cheerio.load(res.text)
-      const result = $('h1').text()
-      expect(result).toMatch('PROPERTIES')
-      done(err)
-    })
-})
-test('property page ', (done) => {
-  return request(server)
-    .get('/property')
-    .expect(200)
-    .end((err, res) => {
-      // console.log('res-text: ', res.text)
-      const $ = cheerio.load(res.text)
       const paragraph = $('h1').text()
-      expect(paragraph).toMatch('PROPERTY')
+      expect(paragraph).toMatch('PROPERTIES')
       done(err)
     })
 })
