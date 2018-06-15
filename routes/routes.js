@@ -42,7 +42,7 @@ router.get('/property/:id', (req, res) => {
           postcode: feedback.postcode,
           image: feedback.image,
           datetime: feedback.datetime,
-          percentage: Math.floor(((feedback.answer1 + feedback.answer2 + feedback.answer3) / 15) * 100) + '%'
+          percentage: Math.floor(((feedback.answer1 + feedback.answer2 + feedback.answer3 + feedback.answer4 + feedback.answer5) / 25) * 100) + '%'
         })
       })
       // console.log(feedbackList)
@@ -69,7 +69,7 @@ router.get('/feedback/:id', (req, res) => {
           city: fb.city,
           postcode: fb.postcode,
           datetime: fb.date,
-          percentage: Math.floor(((fb.a1 + fb.a2 + fb.a3) / 15) * 100) + '%'
+          percentage: Math.floor(((fb.a1 + fb.a2 + fb.a3 + fb.a4 + fb.a5) / 25) * 100) + '%'
         })
       })
       // console.log(feedback)
@@ -80,11 +80,17 @@ router.get('/feedback/:id', (req, res) => {
     })
 })
 
-router.get('/feedbackForm', (req, res) => {
-  res.render('feedbackForm')
+router.get('/form', (req, res) => {
+  db.getProperties()
+    .then(properties => {
+      res.render('form', {properties: properties})
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 })
 
-router.post('/feedbackForm', (req, res) => {
+router.post('/form', (req, res) => {
   const feedback = req.body
   console.log(feedback)
   const id = 1
